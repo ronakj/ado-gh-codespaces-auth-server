@@ -1,4 +1,11 @@
 {
-  "image": "mcr.microsoft.com/vscode/devcontainers/universal:linux",
-  "postCreateCommand": "/home/codespace/.nodejs/current/bin/node ./loadLocalSettings.js"
+  "postCreateCommand": "/home/codespace/.nodejs/current/bin/node ./loadLocalSettings.js && npm i -g azure-functions-core-tools@4 --unsafe-perm true",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-azuretools.vscode-azurefunctions"
+      ]
+    }
+  },
+  "forwardPorts": [7071]
 }
