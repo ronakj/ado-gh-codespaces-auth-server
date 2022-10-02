@@ -1,3 +1,4 @@
 {
-  "postCreateCommand": "node localLocalSettings.js"
+  "image": "mcr.microsoft.com/vscode/devcontainers/universal:linux",
+  "postCreateCommand": "/home/codespace/.nodejs/current/bin/node ./loadLocalSettings.js"
 }
